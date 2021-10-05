@@ -3,6 +3,8 @@
 
 This is my personal implementation of a dotfiles manager written in Python.
 
+![](https://github.com/rocchidavide/sweethome/blob/master/docs/media/sweethome-install.png)
+
 ## Features
 - no third party libs used 
 - you can use non-versioned local modules (called "dots"): you can either version them in a dedicated private git repository using git submodules

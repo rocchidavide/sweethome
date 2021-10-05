@@ -1,4 +1,4 @@
-# SweetHome
+# 🏠 SweetHome
 ### There is not place like ~
 
 This is my personal implementation of a dotfiles manager written in Python.

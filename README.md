@@ -1,26 +1,37 @@
 # SweetHome
-### _There is not place like ~_
+### There is not place like ~
 
 This is my personal implementation of a dotfiles manager written in Python.
 
 ## Features
-
 - no third party libs used 
-- can use non-versioned local modules (called "dots"): you can either version them in a dedicated private git repository using git submodules
-- can compose dotfiles creating 'dotfiles_build'
-- can install desktop entries
-- can install icons
-- can set aliases and exports for each dots
+- you can use non-versioned local modules (called "dots"): you can either version them in a dedicated private git repository using git submodules
+- you can compose dotfiles creating 'dotfiles_build'
+- you can install desktop entries
+- you can install icons
+- you can set aliases and exports for each dots
 
 ## Requirements
 - Python >= 3.4
 
 ## Installation
 
-1) clone the repository
+clone the repository
 
 `git clone https://github.com/rocchidavide/sweethome ~/.sweethome`
 
-2) install stuff
+## Usage
 
-`~/.sweethome install`
+- install all dots
+
+  `~/.sweethome/dotmanage.py install`
+
+
+- install a specific dot
+
+  `~/.sweethome/dotmanage.py install <dot name>`
+
+
+- remove all dots
+
+  `~/.sweethome/dotmanage.py remove`

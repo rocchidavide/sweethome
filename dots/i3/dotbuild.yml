@@ -1,0 +1,16 @@
+builds:
+  - filename: config
+    output_dir: .config/i3
+    includes:
+      - fragments/base.config
+      - fragments/appareance.config
+      - fragments/gaps.config
+      - fragments/display.config
+      - fragments/windows.config
+      - fragments/scratchpad.config
+      - fragments/startup_apps.config
+      - fragments/bindsyms.config
+      - fragments/mouse.config
+      - fragments/workspaces.config
+      - fragments/bar.config
+      - fragments/audio.config

@@ -1,0 +1,11 @@
+installed_dots:
+  - alacritty
+  - bash
+  - compton
+  - i3
+  - nitrogen
+  - rofi
+  # - test
+  - usageprofiles
+  - vim
+  - zsh

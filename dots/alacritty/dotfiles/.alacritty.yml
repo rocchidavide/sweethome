@@ -1,0 +1,71 @@
+font:
+  normal:
+    family: "Hack"
+    style: Regular
+
+  bold:
+    family: mononoki
+    style: Bold
+
+  italic:
+    family: mononoki
+    style: Italic
+
+  bold_italic:
+    family: mononoki
+    style: Bold Italic
+
+  size: 8
+
+window:
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 12
+    y: 12
+
+# Colors (Wombat)
+colors:
+  # Default colors
+  primary:
+    background: '0x1f1f1f'
+    foreground: '0xe5e1d8'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xf7786d'
+    green:   '0xbde97c'
+    yellow:  '0xefdfac'
+    blue:    '0x6ebaf8'
+    magenta: '0xef88ff'
+    cyan:    '0x90fdf8'
+    white:   '0xe5e1d8'
+
+  # Bright colors
+  bright:
+    black:   '0xb4b4b4'
+    red:     '0xf99f92'
+    green:   '0xe3f7a1'
+    yellow:  '0xf2e9bf'
+    blue:    '0xb3d2ff'
+    magenta: '0xe5bdff'
+    cyan:    '0xc2fefa'
+    white:   '0xffffff'
+
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+# background_opacity: 0.0
+
+cursor:
+  # Cursor style
+  #
+  # Values for 'style':
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Beam

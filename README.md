@@ -1,5 +1,5 @@
 # 🏠 SweetHome
-### There is not place like ~
+### There is no place like ~
 
 This is my personal implementation of a dotfiles manager written in Python.
 

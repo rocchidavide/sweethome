@@ -26,12 +26,12 @@ clone the repository
 
 - install all dots
 
-  `~/.sweethome/dotmanage.py install`
+  `sweethome install`
 
 
 - install a specific dot
 
-  `~/.sweethome/dotmanage.py install <dot name>`
+  `sweethome install <dot name>`
 
 
 - remove all dots

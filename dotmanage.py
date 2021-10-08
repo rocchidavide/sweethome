@@ -73,4 +73,5 @@ if __name__ == "__main__":
         remove_sweethomerc_symlink(builder)
         remove_sweethomeprofile_symlink(builder)
 
-    print(f"\n\U0001F389 {Colors.BOLD}Done!{Colors.ENDC}")
+    print(f"\n\U0001F389  {Colors.BOLD}Done!{Colors.ENDC}")
+    print("\nPlease logout and login again to reload profile settings.")

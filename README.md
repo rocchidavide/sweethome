@@ -3,7 +3,7 @@
 
 This is my personal implementation of a dotfiles manager written in Python.
 
-![](https://github.com/rocchidavide/sweethome/blob/master/docs/media/sweethome-install.png)
+![](https://github.com/rocchidavide/sweethome/blob/master/docs/media/sweethome-install.gif)
 
 ## Features
 - no third party libs used 
@@ -37,3 +37,7 @@ clone the repository
 - remove all dots
 
   `~/.sweethome/dotmanage.py remove`
+
+## Credits
+
+- [Cristiano Verondini](http://www.verondini.it/) for the precious help along the years, the friendly company, for sharing coding passion and for the suggestion of the tagline "There is no place like ~"

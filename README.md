@@ -36,7 +36,7 @@ clone the repository
 
 - remove all dots
 
-  `~/.sweethome/dotmanage.py remove`
+  `sweethome remove`
 
 ## Credits
 

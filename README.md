@@ -22,6 +22,8 @@ clone the repository
 
 `git clone https://github.com/rocchidavide/sweethome ~/.sweethome`
 
+then logout and login again to permit profile settings to be loaded.
+
 ## Usage
 
 - install all dots
@@ -36,7 +38,7 @@ clone the repository
 
 - remove all dots
 
-  `~/.sweethome/dotmanage.py remove`
+  `sweethome remove`
 
 ## Credits
 

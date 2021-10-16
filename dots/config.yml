@@ -8,4 +8,5 @@ installed_dots:
   # - test
   - usageprofiles
   - vim
+  - x11
   - zsh

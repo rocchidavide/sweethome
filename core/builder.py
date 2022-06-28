@@ -1,4 +1,5 @@
 from datetime import datetime
+import re
 import os
 from pathlib import Path
 import shutil
@@ -53,15 +54,20 @@ class BuildFile:
             filename = self.basepath / filename
         return filename
 
-    def get_datetime_now(self):
+    @staticmethod
+    def get_datetime_now():
         return datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
     def append_content(self, content, comment=None):
         if comment:
             self.content.append(f"\n# {comment}")
         if isinstance(content, str):
+            # remove comments lines
+            content = re.sub(r'(?m)^ *#.*\n?', '', content)
             self.content.append(content)
         elif isinstance(content, list):
+            # remove comments lines
+            content = [line for line in content if not line.startswith('#')]
             self.content.extend(content)
         else:
             raise Exception('content must be a string or a list of strings')

@@ -7,6 +7,7 @@ import yaml
 from core.builder import BuildFile, get_sweethomerc, get_sweethomeprofile
 from core.console import Colors, print_row_group, print_row_status, print_dot_title
 from core.constants import COMMAND_INSTALL, COMMAND_REMOVE
+from core.exceptions import DotNotFoundError
 from core.files import (
     create_symlinks_from_files_in_dir,
     delete_symlinks_in_dir,
@@ -18,7 +19,10 @@ from core.files import (
 class Dot:
     def __init__(self, dot_name, basepath, config, builder):
         self.dot_name = dot_name
+        # TODO: dots_dir or dot_dir?
         dots_dir = config.get_dot_path(dot_name)
+        if dots_dir is None:
+            raise DotNotFoundError
         self.dot_path = basepath / dots_dir / dot_name
         self.config = config
         self.builder = builder
@@ -178,19 +182,27 @@ class Dot:
         for src_file in dotfiles_path.iterdir():
             dst_path = Path.home() / src_file.name
 
-            if src_file.is_dir() and src_file.name == ".config":
-                if action == COMMAND_INSTALL:
-                    create_symlinks_from_files_in_dir(src_file, dst_path, overwrite=overwrite)
-                elif action == COMMAND_REMOVE:
-                    delete_symlinks_in_dir(src_file, dst_path)
-            elif src_file.is_dir() and src_file.name == '.local':
-                src_local_bin_path = src_file / 'bin'
-                if src_local_bin_path.exists():
-                    dst_path = Path.home() / '.local' / 'bin'
+            if src_file.is_dir():
+                if src_file.name == ".config":
                     if action == COMMAND_INSTALL:
-                        create_symlinks_from_files_in_dir(src_local_bin_path, dst_path, overwrite=overwrite)
+                        create_symlinks_from_files_in_dir(src_file, dst_path, overwrite=overwrite)
                     elif action == COMMAND_REMOVE:
-                        delete_symlinks_in_dir(src_local_bin_path, dst_path)
+                        delete_symlinks_in_dir(src_file, dst_path)
+                elif src_file.name == ".local":
+                    src_local_bin_path = src_file / 'bin'
+                    if src_local_bin_path.exists():
+                        dst_path = Path.home() / '.local' / 'bin'
+                        if action == COMMAND_INSTALL:
+                            create_symlinks_from_files_in_dir(src_local_bin_path, dst_path, overwrite=overwrite)
+                        elif action == COMMAND_REMOVE:
+                            delete_symlinks_in_dir(src_local_bin_path, dst_path)
+                    src_local_share_path = src_file / 'share'
+                    if src_local_share_path.exists():
+                        dst_path = Path.home() / '.local' / 'share'
+                        if action == COMMAND_INSTALL:
+                            create_symlinks_from_files_in_dir(src_local_share_path, dst_path, overwrite=overwrite)
+                        elif action == COMMAND_REMOVE:
+                            delete_symlinks_in_dir(src_local_share_path, dst_path)
             else:
                 if action == COMMAND_INSTALL:
                     create_symlink(src_file, dst_path, overwrite=overwrite)

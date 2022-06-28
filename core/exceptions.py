@@ -1,0 +1,2 @@
+class DotNotFoundError(Exception):
+    pass

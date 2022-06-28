@@ -1,0 +1,4 @@
+# Activate Environment
+alias ae="source ./venv/bin/activate"
+# Deactivate Enviroment
+alias de="deactivate"

@@ -11,7 +11,7 @@ class Colors:
 
 
 def print_dot_title(action, dot_name):
-    print(f'\n{Colors.OKBLUE}> {action.title()} dot "{dot_name}"{Colors.ENDC}')
+    print(f'\n{Colors.OKBLUE}➱ {action.title()} dot "{dot_name}"{Colors.ENDC}')
 
 
 def print_row_group(description):

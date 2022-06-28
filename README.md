@@ -43,7 +43,3 @@ logout and login again to permit profile settings to be loaded.
 - remove all dots
 
   `sweethome remove`
-
-## Credits
-
-- [Cristiano Verondini](http://www.verondini.it/) for the precious help along the years, the friendly company, for sharing coding passion and for the suggestion of the tagline "There is no place like ~"

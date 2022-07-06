@@ -1,0 +1,5 @@
+# TODO: if exists .usageprofiles_local use vars inside it, else these below
+export DISPLAY_LAPTOP="eDP"
+export DISPLAY_LEFT="HDMI-A-0"
+export DISPLAY_CENTER="DisplayPort-4"
+export DISPLAY_RIGHT="DisplayPort-3"

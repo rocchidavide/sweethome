@@ -26,7 +26,7 @@ order += "battery all"
 order += "tztime local"
 
 volume master {
-    format = " ♪ %volume "
+    format = "♪ %volume"
     format_muted = " ♪ muted (%volume) "
     device = "default"
     mixer = "Master"
@@ -34,8 +34,8 @@ volume master {
 }
 
 wireless _first_ {
-    format_up = " %essid "
-    format_down = "  Disconnected "
+    format_up = " %essid"
+    format_down = "  Disconnected"
     # format_up = "<span background='#bd93f9'>  </span><span background='#e5e9f0'> %essid </span>"
     # format_down = "<span background='#bd93f9'> 睊 </span><span background='#e5e9f0'> Disconnected </span>"
     # format_up = "WiFi: (%quality at %essid) %ip"
@@ -52,7 +52,7 @@ ethernet _first_ {
 battery all {
     # remaining is the amount of time until empty
     # emptytime is the clock time at which this will happen
-    format = " %status %percentage (%remaining) "
+    format = "%status %percentage (%remaining)"
     format_down = "No battery"
     last_full_capacity = true
     integer_battery_capacity = true
@@ -65,7 +65,7 @@ battery all {
 }
 
 cpu_usage {
-    format = " cpu  %usage "
+    format = "cpu  %usage"
 }
 
 disk "/" {
@@ -77,11 +77,11 @@ load {
 }
 
 memory {
-    format = " mem %used / %available "
+    format = "mem %used / %available"
     threshold_degraded = "1G"
     format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-    format = " %H:%M  %d.%m.%Y "
+    format = "%d/%m/%Y %H:%M"
 }

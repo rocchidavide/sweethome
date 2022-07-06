@@ -2,8 +2,7 @@
 
 # Display setup
 # -----------------------------------------------------------------------------
-# source $HOME/.screenlayout/box.sh
-source $HOME/.screenlayout/box-dock.sh
+source $HOME/.screenlayout/box.sh
 
 # Disable wifi
 # -----------------------------------------------------------------------------

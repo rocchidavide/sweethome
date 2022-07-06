@@ -1,18 +1,18 @@
 font:
   normal:
-    family: "Hack"
+    family: "Shure Tech Mono Nerd Font"
     style: Regular
 
   bold:
-    family: mononoki
+    family: "Shure Tech Mono Nerd Font"
     style: Bold
 
   italic:
-    family: mononoki
+    family: "Shure Tech Mono Nerd Font"
     style: Italic
 
   bold_italic:
-    family: mononoki
+    family: "Shure Tech Mono Nerd Font"
     style: Bold Italic
 
   size: 8
@@ -25,6 +25,8 @@ window:
   padding:
     x: 12
     y: 12
+
+  opacity: 0.7
 
 # Colors (Wombat)
 colors:
@@ -68,4 +70,4 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Beam
+  style: Underline

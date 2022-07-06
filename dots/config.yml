@@ -1,13 +1,16 @@
 installed_dots:
-  # - alacritty
+  - alacritty
   - bash
-  # - compton
-  # - i3
-  # - nitrogen
+  - dunst
+  - i3
+  - nitrogen
+  - picom
+  - polybar
   - python
-  # - rofi
+  - rofi
+  - starship
   # - test
-  # - usageprofiles
+  - usageprofiles
   # - vim
   # - x11
   # - zsh

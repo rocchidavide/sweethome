@@ -12,5 +12,7 @@ builds:
       - fragments/bindsyms.config
       - fragments/mouse.config
       - fragments/workspaces.config
-      - fragments/bar.config
       - fragments/audio.config
+      - fragments/i3blocks.config
+      # - fragments/bar.config
+      #- fragments/polybar.config

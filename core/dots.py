@@ -183,7 +183,8 @@ class Dot:
             dst_path = Path.home() / src_file.name
 
             if src_file.is_dir():
-                if src_file.name == ".config":
+                # TODO: reverse if order and set this if as 'else'
+                if src_file.name in [".config", ".screenlayout"]:
                     if action == COMMAND_INSTALL:
                         create_symlinks_from_files_in_dir(src_file, dst_path, overwrite=overwrite)
                     elif action == COMMAND_REMOVE:
